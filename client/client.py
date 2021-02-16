@@ -46,8 +46,8 @@ class NetData():
                                 # print("number_request " + str(number_request) + " | "+ "count" + str(count))
                                 break
                             with urllib.request.urlopen("http://" + os.environ['SERVER_IP']  + ":" + os.environ['SERVER_PORT']) as url:
-                            # with urllib.request.urlopen("http://192.168.2.83:8983/solr/demo/select?q=*%3A*") as url:
-                                data = json.loads(url.read().decode())
+                            # with urllib.request.urlopen("http://131.155.35.53:8080") as url:
+                                data = url.read().decode()
                         # end = time.perf_counter()
                         # print(end - start)
                             # sleep_time = ((1000 - 2.5*number_request)/number_request)/1000
